@@ -1,0 +1,63 @@
+$color-primary: white;
+$color-secondary: rgb(0, 149, 255);
+$color-text: rgb(47, 47, 47);
+$color-action: #A0A0A0;
+
+
+@mixin action {
+    color: $color-action;
+    font-size: 18px;
+}
+
+$--ytd-searchbox-legacy-border-shadow-color: #eee;
+$--ytd-searchbox-legacy-border-color: #ccc;
+$--ytd-searchbox-background: white;
+
+$youtube-button: #f8f8f8;
+$youtube-button-border: #d3d3d3;
+$youtube-search-focus-border: rgba(0, 47, 255, 0.445);
+
+
+
+.search {
+    height: 32px;  
+    width: 50%;
+    &__input {
+        width: 100%;
+        background-color: $--ytd-searchbox-background;
+        border: 0.5px solid $--ytd-searchbox-legacy-border-color;
+        box-shadow: inset 0 1px 2px $--ytd-searchbox-legacy-border-shadow-color;
+        border-radius: 1px 0 0 2px;
+        input {
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            line-height: 30px;
+            outline: none;
+            padding-left: 5px;
+            border-radius: 1px 0 0 2px;
+        }
+        input:focus {
+            width: 100%;
+            border: 0.5px solid blue;
+            font-size: 16px;
+            line-height: 30px;
+            border-right: blue;
+            border-radius: 1px 0 0 2px;
+        }
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 65px;
+        background: $youtube-button;
+        border: 1px solid $youtube-button-border;
+        box-sizing: border-box;
+        i {
+            @include action;
+            font-size: 16px;
+        }
+    }
+}
